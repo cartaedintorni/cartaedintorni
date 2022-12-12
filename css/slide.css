@@ -1,0 +1,13 @@
+.slide {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    position: relative;
+}
+.slide > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

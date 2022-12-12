@@ -1,0 +1,39 @@
+.sticky {
+    /* display: block; */
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.menu  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 64px;
+    font-family: 'Open Sans',sans-serif;
+    /* background-color: #333; */
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+.menu ul::before {content: "";}
+.menu ul::after {content: "";}
+
+.menu li:not(ul:first-child) {
+    float: left;
+    display: block;
+    color: #1a1a1a;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 100px;
+}
+
+
