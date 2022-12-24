@@ -1,0 +1,10 @@
+body {}
+.slidecontainer {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 100vh;
+}
+.slidecontainer .stop-section {
+    scroll-snap-align: start;
+}

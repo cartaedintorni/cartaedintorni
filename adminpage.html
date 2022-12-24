@@ -1,58 +1,238 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta&Dintorni</title>
-    <link rel="icon" href="./assets/images/icon.jpg">
-    <link href="./css/global.css" rel="stylesheet">
-    <link href="./css/slide.css" rel="stylesheet">
-    <link href="./css/menu.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="/js/jquery.min.js"></script>
-</head>
-<body class="slidecontainer">
-    <div contentfrom="/menu.html" class="toload sticky-top w-100 position-fixed stop-section" id="menu"></div>
-    <div id="firebaselogin">
+<html lang="en" bs-app-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap.min.css"
+    />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" type="text/css" rel="stylesheet">
 
+    <link 
+      rel="stylesheet" type="text/css"
+      href="./assets/css/styles.css"
+
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      bs-system-element=""
+      bs-hidden=""
+      />
+      <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      bs-system-element=""
+      bs-hidden=""
+      />
+      <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/reflow.css"
+      bs-system-element=""
+      bs-hidden=""
+    />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.4/collection/components/icon/icon.min.css" integrity="sha512-DR9Jj0uFIfe7v1QLrvPRusRxqdSnVSVRyRBt1H8gcRQgxMKEwsOMSNYs0hyIpo8AITFyCMDC2Q1fCg1XcgdYig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css" integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      bs-hidden="1"
+      bs-system-element="1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.1.2/typicons.min.css" integrity="sha512-/O0SXmd3R7+Q2CXC7uBau6Fucw4cTteiQZvSwg/XofEu/92w6zv5RBOdySvPOQwRsZB+SFVd/t9T5B/eg0X09g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link 
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+      bs-system-element=""
+      bs-hidden=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css?bsCacheToken=1671743930173"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div data-reflow-type="product-search">
+            <div class="reflow-product-search">
+              <div class="ref-input-wrapper">
+                <input
+                  type="text"
+                  class="ref-search"
+                  inputmode="search"
+                  placeholder="Search Products"
+                />
+                <span class="ref-cancel-search" style="display: none"></span>
+              </div>
+              <div class="ref-button" type="submit" style="display: none">
+                Search
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6 col-lg-7 font-monospace text-break d-table-row">
+          <section class="add-new-product">
+            <div
+              class="text-start d-flex d-lg-flex flex-column flex-shrink-0 align-items-start justify-content-lg-start align-items-lg-center"
+            >
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Nome</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            </div>
+            <div
+              class="text-start d-flex d-lg-flex flex-column flex-shrink-0 align-items-start justify-content-lg-start align-items-lg-center"
+            >
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Prezzo</span>
+              </div>
+              <input type="number" class="form-control" min="0" value="0" aria-label="" step="0.50">
+              <div class="input-group-append">
+                <span class="input-group-text">€</span>
+              </div>
+            </div>
+            </div>
+            <div> 
+              <!-- <div class="simple-slider">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div
+                      class="swiper-slide"
+                      style="
+                        background: url('https://cdn.bootstrapstudio.io/placeholders/1400x800.png')
+                          center center / cover no-repeat;
+                      "
+                    ></div>
+                    <div
+                      class="swiper-slide"
+                      style="
+                        background: url('https://cdn.bootstrapstudio.io/placeholders/1400x800.png')
+                          center center / cover no-repeat;
+                      "
+                    ></div>
+                    <div
+                      class="swiper-slide"
+                      style="
+                        background: url('https://cdn.bootstrapstudio.io/placeholders/1400x800.png')
+                          center center / cover no-repeat;
+                      "
+                    ></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div> -->
+              
+            </div>
+
+            <div
+              class="text-start d-flex d-lg-flex flex-column flex-shrink-0 align-items-start justify-content-lg-start align-items-lg-center"
+            >
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Descrizione</span>
+              </div>
+              <div class="input-group-append flex-column">
+                <div id="editor"></div>
+              </div>
+              
+            </div>
+            </div>
+            <div class="d-lg-flex justify-content-lg-center align-items-lg-start mt-4">
+              <button class="btn btn-primary" type="button">Aggiungi</button>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <div
+            data-reflow-type="product-list"
+            data-reflow-order="date_desc"
+            data-reflow-show="image,name,excerpt,price,pagination"
+          >
+            <div class="reflow-product-list">
+              <div class="ref-products">
+                <div class="ref-product">
+                  <div class="ref-media">
+                    <img
+                      class="ref-image"
+                      src="https://cdn.bootstrapstudio.io/products/product-29_md.jpg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ref-product-data">
+                    <div class="ref-product-info">
+                      <h5 class="ref-name">Smart Watch</h5>
+                      <p class="ref-excerpt">
+                        Velit omnis dicta consequatur vel aut fugiat pariatur.
+                      </p>
+                    </div>
+                    <strong class="ref-price">$31.77</strong>
+                  </div>
+                </div>
+                <div class="ref-product">
+                  <div class="ref-media">
+                    <img
+                      class="ref-image"
+                      src="https://cdn.bootstrapstudio.io/products/product-28_md.jpg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ref-product-data">
+                    <div class="ref-product-info">
+                      <h5 class="ref-name">Sneakers</h5>
+                      <p class="ref-excerpt">
+                        Autem sed facilis accusantium dolor.
+                      </p>
+                    </div>
+                    <strong class="ref-price">$6.45</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
-    <script defer type="module" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script defer type="module" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script defer type="module" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
-    <script>
-        console.log(process.env.ciao)
-        function getFirebase() {
-            var firebaseConfig = {
-                apiKey: process.env.FIREBASEapiKey,
-                appId: process.env.FIREBASEappId,
-                projectId: process.env.FIREBASEprojectId,
-                databaseURL: process.env.FIREBASEdatabaseURL,
-                storageBucket: process.env.FIREBASEstorageBucket
-            };
-            
-            // Initialize Firebase
-            var app = firebase.initializeApp(firebaseConfig);
-            return app
-        }
-        window.onload = ()=>{
-            var div = document.getElementById("firebaselogin")
-            if (firebase.auth) chargelogin(div)
-            else chargeuser(div,firebase.auth)
-        }
-        function chargelogin(div) {
-            var f = getFirebase()
-        }
-        function chargeuser(div,auth) {
-
-        }
-        Array.from(document.getElementsByClassName("toload")).forEach(toload=>{
-            console.log(toload);
-            var url = toload.getAttribute("contentfrom")
-            $(()=>{
-                $(toload).load(url); 
-            });
-        })
-    </script>
-</body>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="./assets/js/adminpage.js"></script>
+  </body>
 </html>
