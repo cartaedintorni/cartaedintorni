@@ -35,5 +35,7 @@ class Product {
                 ap[i.price]
             ))
         })
+        return prods
     }
 }
+var log = ()=>{fetchAll((a)=>{console.log(Product.fromArrays(a))})}
