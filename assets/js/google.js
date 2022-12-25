@@ -38,4 +38,4 @@ class Product {
         return prods
     }
 }
-var log = ()=>{fetchAll((a)=>{console.log(Product.fromArrays(a))})}
+var log = ()=>{fetchAll((a)=>{console.log(Product.fromArrays(a.values))})}
